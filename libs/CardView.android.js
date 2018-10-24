@@ -4,20 +4,10 @@ import {
   requireNativeComponent,
   View,
   PixelRatio,
-  Platform,
-  ViewPropTypes
+  Platform
 } from 'react-native';
-var iface = {
-  name: 'CardView',
-  propTypes: {
-    cornerRadius: PropTypes.number,
-    cardElevation: PropTypes.number,
-    cardMaxElevation: PropTypes.number,
-    ...ViewPropTypes // include the default view properties
-  }
-};
 
-const RNCardView = requireNativeComponent('RNCardView', iface);
+const RNCardView = requireNativeComponent('RNCardView');
 class CardView extends Component {
   render() {
     if (Platform.Version < 21) {
