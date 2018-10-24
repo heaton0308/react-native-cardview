@@ -4,7 +4,8 @@ import {
   requireNativeComponent,
   View,
   PixelRatio,
-  Platform
+  Platform,
+  ViewPropTypes
 } from 'react-native';
 var iface = {
   name: 'CardView',
@@ -12,7 +13,7 @@ var iface = {
     cornerRadius: PropTypes.number,
     cardElevation: PropTypes.number,
     cardMaxElevation: PropTypes.number,
-    ...View.propTypes // include the default view properties
+    ...ViewPropTypes // include the default view properties
   }
 };
 
